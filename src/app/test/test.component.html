@@ -1,8 +1,7 @@
-<div class="row">
-    <div class="col-sm-6 col-sm-offset-3 text-center">
-        <h3>Test Component nested in Servers Component</h3>
-        <input type="text" [(ngModel)]="pesho" />
-        <p>{{ pesho }}</p>
-        <p>{{ getOnline() == true ? 'User with ID ' + getId() +  ' is \'online\'' : 'false' }}</p>
-    </div>
-</div>
+<!-- <input type="text" [(ngModel)]="pesho" />
+<p>{{ pesho }}</p> -->
+<!-- <p>{{ getServerStatus() == true ? 'User with ID ' + getId() +  ' is \'online\'' : 'false' }}</p> -->
+<p [ngStyle]="{backgroundColor: getColor()}"
+    [ngClass]="{online: getServerStatus() == true}">
+    {{ checkServerStatus() }}
+</p>

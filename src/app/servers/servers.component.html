@@ -4,9 +4,18 @@
 (input)="updateServerName($event)">
 <p>{{ serverName }}</p>
 <button class="btn btn-primary" 
-    (click)="addServer()"
-    [disabled]="!allowNewServer">
+    (click)="addServer()">
     Add Server
 </button>
+<p *ngIf="serverCreated; else noServer">Server was successfully created!</p>
+<ng-template #noServer>
+    <p>No server was created!</p>
+</ng-template>
+
 <hr>
-<test-app></test-app>
+<div class="row">
+    <div class="col-sm-6 col-sm-offset-3 text-center">
+        <h3>Test Component nested in Servers Component</h3>
+        <test-app *ngFor="let server of servers"></test-app>
+    </div>
+</div>
