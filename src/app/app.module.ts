@@ -3,10 +3,11 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
-import { TestComponent } from './test.component';
+import { TestComponent } from './test/test.component';
 
 @NgModule({
   declarations: [
+    AppComponent,
     TestComponent
   ],
   imports: [
@@ -14,6 +15,6 @@ import { TestComponent } from './test.component';
     FormsModule
   ],
   providers: [],
-  bootstrap: [TestComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
