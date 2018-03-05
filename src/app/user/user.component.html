@@ -1,0 +1,15 @@
+<hr>
+<h4>Second Assignment</h4>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3 text-center">
+      <label for="username" class="">Username: </label>
+      <input type="text" name="username" id="username" 
+      [(ngModel)]="username">
+      <p>{{ getUsername() }}</p>
+      <button class="btn btn-primary"
+      (click)="onResetUser()"
+      [disabled]="username == ''">
+        Reset User
+      </button>
+  </div>
+</div>

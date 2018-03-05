@@ -1,4 +1,12 @@
 <h2>This is the Servers Component</h2>
 <hr>
-<button class="btn btn-primary" (click)="addServer()" [disabled]="!allowNewServer">Add Server</button>
+<input type="text" class="form-control"
+(input)="updateServerName($event)">
+<p>{{ serverName }}</p>
+<button class="btn btn-primary" 
+    (click)="addServer()"
+    [disabled]="!allowNewServer">
+    Add Server
+</button>
+<hr>
 <test-app></test-app>
