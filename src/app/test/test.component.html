@@ -3,5 +3,6 @@
         <h3>Test component</h3>
         <input type="text" [(ngModel)]="pesho" />
         <p>{{ pesho }}</p>
+        <p>{{ getOnline() == true ? 'User with ID ' + getId() +  ' is \'online\'' : 'false' }}</p>
     </div>
 </div>

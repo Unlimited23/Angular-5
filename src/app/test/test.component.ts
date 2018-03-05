@@ -5,5 +5,15 @@ import { Component } from '@angular/core';
     templateUrl: './test.component.html',
 })
 export class TestComponent {
-    pesho = '';
+    peshoId: number = 10;
+    isOnline: boolean = true;
+    pesho: string = '';
+
+    getOnline() {
+        return this.isOnline;
+    }
+
+    getId() {
+        return this.peshoId;
+    }
 }
