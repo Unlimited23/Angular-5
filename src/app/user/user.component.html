@@ -13,3 +13,16 @@
       </button>
   </div>
 </div>
+<hr>
+<h4>Third Assignment</h4>
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3 text-center">
+    <button class="btn btn-primary" (click)="togglePasswordButton()">Display Details</button>
+    <p *ngIf="isVisible">Secret Password</p>
+    <div id="pesho{{ logItem }}" 
+      *ngFor="let logItem of log; let i = index"
+      [ngStyle]="{'backgroundColor': i >= 4 ? 'red' : 'transparent'}"
+      [ngClass]="{'white-color': i >= 4}">{{ logItem }}
+    </div>
+  </div>
+</div>

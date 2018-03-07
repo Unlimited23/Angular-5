@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
   private username = '';
+  isVisible = false;
+  log = [];
 
   constructor() { }
 
@@ -19,5 +21,10 @@ export class UserComponent implements OnInit {
 
   onResetUser() {
     this.username = '';
+  }
+
+  togglePasswordButton() {
+    this.isVisible = !this.isVisible;
+    this.log.push(new Date());
   }
 }
